@@ -1,0 +1,21 @@
+Create Firebase Authentication users first, then create Firestore docs with matching UIDs.
+
+users/{student-auth-uid}
+  name: "Juan Dela Cruz"
+  email: "student@college.edu"
+  role: "student"
+  section: "BSIT-2A"
+  course: "BSIT"
+
+users/{professor-auth-uid}
+  name: "Prof. Maria Santos"
+  email: "professor@college.edu"
+  role: "professor"
+  sections: ["BSIT-2A", "BSIT-3B"]
+  department: "Information Technology"
+
+users/{admin-auth-uid}
+  name: "Admin Reyes"
+  email: "admin@college.edu"
+  role: "admin"
+  department: "College Administration"

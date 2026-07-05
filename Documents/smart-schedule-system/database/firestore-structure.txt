@@ -1,0 +1,45 @@
+users/{userId}
+  name: string
+  email: string
+  role: "student" | "professor" | "admin"
+  section: string | null
+  sections: array<string>
+  department: string
+  createdAt: timestamp
+
+sections/{sectionId}
+  name: string
+  course: string
+  yearLevel: string
+  adviserId: string | null
+
+schedules/{scheduleId}
+  subject: string
+  professorId: string
+  professor: string
+  section: string
+  date: string
+  startTime: string
+  endTime: string
+  room: string
+  status: "scheduled" | "room_changed" | "cancelled" | "absent"
+  createdAt: timestamp
+  updatedAt: timestamp
+
+announcements/{announcementId}
+  title: string
+  message: string
+  authorId: string
+  author: string
+  audience: "all" | "student" | "professor" | "admin" | sectionId
+  type: "reminder" | "room_change" | "absence" | "schedule_update"
+  createdAt: timestamp
+
+notifications/{notificationId}
+  userId: string
+  title: string
+  message: string
+  read: boolean
+  sourceType: "schedule" | "announcement"
+  sourceId: string
+  createdAt: timestamp
