@@ -1,0 +1,255 @@
+@media (max-width: 900px) {
+  body.menu-open {
+    overflow: hidden;
+  }
+
+  .login-shell,
+  .content-grid,
+  .management-grid,
+  .metric-grid,
+  .calendar-board {
+    grid-template-columns: 1fr;
+  }
+
+  .login-shell {
+    align-content: start;
+    min-height: 100svh;
+    padding: 18px 0 28px;
+  }
+
+  .brand-panel h1 {
+    font-size: 2.4rem;
+    line-height: 1.05;
+  }
+
+  .brand-panel p {
+    font-size: 1rem;
+    line-height: 1.55;
+  }
+
+  .mobile-appbar {
+    position: sticky;
+    top: 0;
+    z-index: 30;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-height: 64px;
+    padding: 10px 14px;
+    background: rgba(246, 247, 251, 0.96);
+    border-bottom: 1px solid var(--line);
+    backdrop-filter: blur(10px);
+  }
+
+  .mobile-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+  }
+
+  .mobile-brand span {
+    display: inline-grid;
+    place-items: center;
+    flex: 0 0 auto;
+    width: 36px;
+    height: 36px;
+    border-radius: var(--radius);
+    background: #fbbf24;
+    color: #1f2937;
+    font-weight: 900;
+  }
+
+  .mobile-brand strong {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .mobile-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 35;
+    display: block;
+    pointer-events: none;
+    background: rgba(15, 23, 42, 0);
+    transition: background 180ms ease;
+  }
+
+  .mobile-overlay.is-open {
+    pointer-events: auto;
+    background: rgba(15, 23, 42, 0.48);
+  }
+
+  .sidebar {
+    position: fixed;
+    inset: 0 auto 0 0;
+    z-index: 40;
+    width: min(82vw, 320px);
+    padding: 18px;
+    transform: translateX(-105%);
+    transition: transform 190ms ease;
+  }
+
+  .sidebar.is-open {
+    transform: translateX(0);
+  }
+
+  .sidebar nav {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar nav a {
+    min-height: 46px;
+  }
+
+  .main-panel {
+    margin-left: 0;
+    padding: 16px;
+  }
+
+  .topbar,
+  .section-banner,
+  .user-chip {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .user-chip {
+    width: 100%;
+  }
+
+  .metric-grid {
+    grid-template-columns: repeat(3, minmax(96px, 1fr));
+    overflow-x: auto;
+    padding-bottom: 4px;
+    scroll-snap-type: x mandatory;
+  }
+
+  .metric-card {
+    scroll-snap-align: start;
+  }
+
+  .section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .table-wrap {
+    border: 0;
+    background: transparent;
+  }
+
+  table,
+  thead,
+  tbody,
+  tr,
+  td {
+    display: block;
+    min-width: 0;
+    width: 100%;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tr {
+    margin-bottom: 12px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: #fff;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+  }
+
+  td {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    min-height: 46px;
+    padding: 10px 12px;
+  }
+
+  td::before {
+    content: attr(data-label);
+    color: var(--muted);
+    font-size: 0.78rem;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+
+  td select {
+    max-width: 190px;
+  }
+
+  .calendar-board {
+    grid-template-columns: 1fr;
+  }
+
+  .calendar-day {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 560px) {
+  .demo-grid,
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .login-card {
+    padding: 20px;
+  }
+
+  .auth-tabs {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-strip {
+    display: grid;
+  }
+
+  .brand-mark {
+    width: 42px;
+    height: 42px;
+  }
+
+  .brand-panel h1 {
+    font-size: 2rem;
+  }
+
+  .brand-panel {
+    padding-top: 8px;
+  }
+
+  .topbar h1 {
+    font-size: 1.55rem;
+  }
+
+  .metric-grid {
+    grid-template-columns: 1fr;
+    overflow-x: visible;
+  }
+
+  .mini-list div,
+  .detail-list div,
+  td {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  td select {
+    max-width: 100%;
+  }
+
+  .item-card,
+  .panel,
+  .metric-card,
+  .calendar-day,
+  .section-banner {
+    padding: 14px;
+  }
+}
