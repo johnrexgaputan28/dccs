@@ -1,5 +1,5 @@
 window.FirebaseConfig = {
-  enabled: true,
+  enabled: false,
   note: "Set enabled to true and paste your Firebase web app config from Project settings > Your apps.",
   config: {
     apiKey: "AIzaSyDXHGSLCAtK9DB0pqKuuXcjAPN8m93P-OQ",
